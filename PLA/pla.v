@@ -152,7 +152,7 @@ assign p5 = charen & hiram &      !ms3 & !exrom & !game & !rw & aec & a12 & !a13
 assign p6 = charen & loram & ba & !ms3 & !exrom & !game &  rw & aec & a12 & !a13 & a14 & a15;
 assign p7 = charen & loram &      !ms3 & !exrom & !game & !rw & aec & a12 & !a13 & a14 & a15;
 
-assign p8 = ba & !ms3 & exrom & !game & rw & aec & a13 & !a13 & a14 & a15;
+assign p8 = ba & !ms3 & exrom & !game & rw & aec & a12 & !a13 & a14 & a15;
 assign p9 =      !ms3 & exrom & !game & rw & aec & a12 & !a13 & a14 & a15;
 
 assign p10 = ba & !ms2 & ms3 &  rw & aec & a12 & !a13 & a14 & a15;
