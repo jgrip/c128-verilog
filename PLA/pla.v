@@ -234,7 +234,7 @@ assign p66 = !aec;
 assign p67 = !ms2 & !z80en       & aec & !a10 & !a11 & a12 & !a13 & !a14 & !a15;
 assign p68 = !ms2 & !z80en & !rw & aec & !a10 & !a11 & a12 & !a13 & !a14 & !a15;
 
-assign p69 = !charen & !vma5 & vma4 & ms3 & aec;
+assign p69 = !charen & !vma5 & vma4 & ms3 & aec & dmaack;
 
 assign p70 = !rom_256 & !ms0 & !ms1 & ms3 & rw & aec               & a14 & !a15;
 assign p71 = !rom_256 & !ms0 & !ms1 & ms3 & rw & aec & !a12 & !a13 & a14 &  a15;
@@ -274,7 +274,7 @@ assign dir = p12 || p14 || p16 || p18 || p20 || p22 || p24 || p26 || p28 || p30 
 assign vic = p12 || p13 || p14 || p15 || p16 || p17 || p18 || p19 || p20 || p21 || p22 || p23 || p61;
 assign ioacc = p0 || p1 || p2 || p3 || p4 || p5 || p6 || p7 || p8 || p9 || p10 || p11 || 
                p12 || p13 || p14 || p15 || p16 || p17 || p18 || p19 || p20 || p21 || p22 || p61 || p62;
-assign gwe = p37;
+assign gwe = p37 || p68;
 assign colram = p24 || p25 || p26 || p27 || p28 || p29 || p30 || p31 || p32 || p33 || p34 || p35 || p36 || p63 || p67;
 assign charrom = p39 || p40 || p41 || p42 || p43 || p44 || p69;
 
