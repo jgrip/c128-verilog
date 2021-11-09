@@ -204,10 +204,10 @@ assign p44 = !ms0 & !ms1 & ms2 &ms3 & z80en & rw & aec & a12 & !a13 & a14 & a15;
 assign p45 = hiram & loram & !ms3 & !exrom & rw & aec & !a13 & !a14 & a15;
 
 assign p46 = !ms3 & exrom & !game & aec & !a13 & !a14 & a15;
-assign p47 = ms0 & !ms1 & ms3 & exrom & !game & aec & !a14 & a15;
-assign p48 = !ms0 & ms1 & ms3                 & aec & !a14 & a15;
+assign p47 = ms0 & !ms1 & ms3 & exrom & !game & rw & aec & !a14 & a15;
+assign p48 = !ms0 & ms1 & ms3                 & rw & aec & !a14 & a15;
 
-assign p49 = hiram & !ms3 & !exrom & !game & aec & a13 & !a14 & a15;
+assign p49 = hiram & !ms3 & !exrom & !game & rw & aec & a13 & !a14 & a15;
 assign p50 = ms3 & exrom & !game & aec & a13 & !a14 & a15;
 
 assign p51 = vma5 & vma4 & !ms3 & exrom & !game & !aec;
