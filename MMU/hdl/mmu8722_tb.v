@@ -4,17 +4,17 @@ module mmu8722_tb ();
     reg clk, rst, rw;
     reg [15:0] a;
     reg [7:0] d_r;
-    wire [7:0] d_q;
+    wire [7:0] d;
 
-    mmu8722 DUT (
+    mmu8722 dut (
         .reset_n(rst),
         .clk(clk),
         .rw(rw),
         .addr(a),
-        .d(d_q)
+        .d(d)
     );
 
-    assign d_q = (rw == 0) ? d_r : 8'bz;
+    assign d = (rw == 0) ? d_r : 8'bz;
 
     initial begin
         clk = 1'b0;
@@ -45,6 +45,7 @@ module mmu8722_tb ();
         rw = 1'b1;
         d_r = 8'h00;
         #4
+        assert(dut.cr_r == 8'h55);
         a = 16'hd500;
         rw = 1'b1;
         #2

@@ -64,7 +64,7 @@ module mmu8722 (
             rcr_common_l_r <= 0;
             rcr_common_h_r <= 0;
             vicbank_r <= 2'b00;
-        end else if (rw == 0) begin
+        end else if (!rw) begin
             if (cs_d500 && os_r == 0) begin
                 case (addr[4:0])
                     0 : cr_r <= d;
@@ -113,7 +113,7 @@ module mmu8722 (
     end
 
     always @(*) begin
-        if (rw == 1 && cs_d500 && os_r == 0) begin
+        if (rw && cs_d500 && !os_r) begin
             case (addr[4:0])
                 0 : d_r = cr_r;
                 1 : d_r = pcr_r[0];
@@ -146,6 +146,5 @@ module mmu8722 (
             taddr_r <= addr[15:8];
         end
     end
-
 
 endmodule
