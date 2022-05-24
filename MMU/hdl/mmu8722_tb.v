@@ -7,11 +7,11 @@ module mmu8722_tb ();
     wire [7:0] d_q;
 
     mmu8722 DUT (
-        .reset_i_n(rst),
-        .clk_i(clk),
-        .rw_i(rw),
-        .addr_i(a),
-        .d_q(d_q)
+        .reset_n(rst),
+        .clk(clk),
+        .rw(rw),
+        .addr(a),
+        .d(d_q)
     );
 
     assign d_q = (rw == 0) ? d_r : 8'bz;
