@@ -152,11 +152,11 @@ assign p5 = charen & hiram &      !ms3 & !exrom & !game & !rw & aec & a12 & !a13
 assign p6 = charen & loram & ba & !ms3 & !exrom & !game &  rw & aec & a12 & !a13 & a14 & a15;
 assign p7 = charen & loram &      !ms3 & !exrom & !game & !rw & aec & a12 & !a13 & a14 & a15;
 
-assign p8 = ba & !ms3 & exrom & !game & rw & aec & a12 & !a13 & a14 & a15;
-assign p9 =      !ms3 & exrom & !game & rw & aec & a12 & !a13 & a14 & a15;
+assign p8 = ba & !ms3 & exrom & !game &  rw & aec & a12 & !a13 & a14 & a15;
+assign p9 =      !ms3 & exrom & !game & !rw & aec & a12 & !a13 & a14 & a15;
 
-assign p10 = ba & !ms2 & ms3 &  rw & aec & a12 & !a13 & a14 & a15;
-assign p11 =      !ms2 & ms3 & !rw & aec & a12 & !a13 & a14 & a15;
+assign p10 = ba & !ms2 & ms3 & z80en &  rw & aec & a12 & !a13 & a14 & a15;
+assign p11 =      !ms2 & ms3 & z80en & !rw & aec & a12 & !a13 & a14 & a15;
 
 assign p12 = charen & hiram & ba & !ms3 & game &  rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
 assign p13 = charen & hiram &      !ms3 & game & !rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
@@ -168,11 +168,11 @@ assign p17 = charen & hiram &      !ms3 & !exrom & !game & !rw & aec & !a10 & !a
 assign p18 = charen & loram & ba & !ms3 & !exrom & !game &  rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
 assign p19 = charen & loram &      !ms3 & !exrom & !game & !rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
 
-assign p20 = ba & !ms3 & exrom & !game & rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
-assign p21 =      !ms3 & exrom & !game & rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
+assign p20 = ba & !ms3 & exrom & !game &  rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
+assign p21 =      !ms3 & exrom & !game & !rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
 
-assign p22 = ba & !ms2 & ms3 &  rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
-assign p23 =      !ms2 & ms3 & !rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
+assign p22 = ba & !ms2 & ms3 & z80en &  rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
+assign p23 =      !ms2 & ms3 & z80en & !rw & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
 
 assign p24 = charen & hiram & ba & !ms3 & game &  rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 assign p25 = charen & hiram &      !ms3 & game & !rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
@@ -182,16 +182,16 @@ assign p27 = charen & loram &      !ms3 & game & !rw & aec & !a10 & a11 & a12 & 
 assign p28 = charen & hiram & ba & !ms3 & !exrom & !game &  rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 assign p29 = charen & hiram &      !ms3 & !exrom & !game & !rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 assign p30 = charen & loram & ba & !ms3 & !exrom & !game &  rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
-assign p31 = charen & loram &      !ms3 & !exrom & !game & !rw & aec & !a10 & a11 & a12 & !a13       & a15;
+assign p31 = charen & loram &      !ms3 & !exrom & !game & !rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 
-assign p32 = ba & !ms3 & exrom & !game & rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
-assign p33 =      !ms3 & exrom & !game & rw & aec & !a10 & a11 & a12 & !a13       & a15;
+assign p32 = ba & !ms3 & exrom & !game &  rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
+assign p33 =      !ms3 & exrom & !game & !rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 
-assign p34 = ba & !ms2 & ms3 &  rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
-assign p35 =      !ms2 & ms3 & !rw & aec & !a10 & a11 & a12 & !a13       & a15;
+assign p34 = ba & !ms2 & ms3 & z80en &  rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
+assign p35 =      !ms2 & ms3 & z80en & !rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 
 assign p36 = !aec;
-assign p37 = !rw & aec & !a10 & a11 & a12 & !a13 & a15;
+assign p37 = !rw & aec & !a10 & a11 & a12 & !a13 & a14 & a15;
 
 assign p39 = !charen & hiram & !ms3 &           game & rw & aec & a12 & !a13 & a14 & a15;
 assign p40 = !charen & loram & !ms3 &           game & rw & aec & a12 & !a13 & a14 & a15;
@@ -200,15 +200,15 @@ assign p41 = !charen & hiram & !ms3 & !exrom & !game & rw & aec & a12 & !a13 & a
 assign p42 = va14 & !vma5 & vma4 & !ms3          &  game & !aec;
 assign p43 = va14 & !vma5 & vma4 & !ms3 & !exrom & !game & !aec;
 
-assign p44 = !ms0 & !ms1 & ms2 &ms3 & z80en & rw & aec & a12 & !a13 & a14 & a15;
+assign p44 = !ms0 & !ms1 & ms2 & ms3 & z80en & rw & aec & a12 & !a13 & a14 & a15;
 assign p45 = hiram & loram & !ms3 & !exrom & rw & aec & !a13 & !a14 & a15;
 
 assign p46 = !ms3 & exrom & !game & aec & !a13 & !a14 & a15;
-assign p47 = ms0 & !ms1 & ms3 & exrom & !game & rw & aec & !a14 & a15;
-assign p48 = !ms0 & ms1 & ms3                 & rw & aec & !a14 & a15;
+assign p47 = ms0 & !ms1 & ms3 & rw & aec & !a14 & a15;
+assign p48 = !ms0 & ms1 & ms3 & rw & aec & !a14 & a15;
 
 assign p49 = hiram & !ms3 & !exrom & !game & rw & aec & a13 & !a14 & a15;
-assign p50 = ms3 & exrom & !game & aec & a13 & !a14 & a15;
+assign p50 = !ms3 & exrom & !game & aec & a13 & a14 & a15;
 
 assign p51 = vma5 & vma4 & !ms3 & exrom & !game & !aec;
 assign p52 =  ms0 & !ms1 & ms3 & rw & aec & !a12 & !a13 & a14 & a15;
@@ -223,9 +223,9 @@ assign p58 = hiram         & !ms3          &  game & rw & aec & a13 &  a14 & a15
 assign p59 = hiram         & !ms3 & !exrom & !game & rw & aec & a13 &  a14 & a15;
 assign p60 = hiram & loram & !ms3          &  game & rw & aec & a13 & !a14 & a15;
 
-assign p61 = !z80io & !z80en & aec & !a10 & !a11        & !a13 & a14 & a15;
-assign p62 = !z80io & !z80en & aec               &  a12 & !a13 & a14 & a15;
-assign p63 = !z80io & !z80en & aec & !a10 &  a11 &  a12 & !a13 & a14 & a15;
+assign p61 = !z80io & !z80en & aec & !a10 & !a11 & a12 & !a13 & a14 & a15;
+assign p62 = !z80io & !z80en & aec               & a12 & !a13 & a14 & a15;
+assign p63 = !z80io & !z80en & aec & !a10 &  a11 & a12 & !a13 & a14 & a15;
 
 assign p64 = !rw & aec;
 assign p65 =  rw & aec;
@@ -234,7 +234,7 @@ assign p66 = !aec;
 assign p67 = !ms2 & !z80en       & aec & !a10 & !a11 & a12 & !a13 & !a14 & !a15;
 assign p68 = !ms2 & !z80en & !rw & aec & !a10 & !a11 & a12 & !a13 & !a14 & !a15;
 
-assign p69 = !charen & !vma5 & vma4 & ms3 & aec & dmaack; // dmaack missing from original code
+assign p69 = !charen & !vma5 & vma4 & ms3 & !aec & dmaack;
 
 assign p70 = !rom_256 & !ms0 & !ms1 & ms3 & rw & aec               & a14 & !a15;
 assign p71 = !rom_256 & !ms0 & !ms1 & ms3 & rw & aec & !a12 & !a13 & a14 &  a15;
@@ -252,7 +252,7 @@ assign p80 =             ms0 & !ms1 & ms2 & ms3 & rw & aec & a12 & !a13 & a14 & 
 
 assign p81 = !ms3 & exrom & !game & aec &  a12        & !a14 & !a15;
 assign p82 = !ms3 & exrom & !game & aec        &  a13 & !a14;
-assign p83 = !ms3 & exrom & !game & aec               &  a14;
+assign p83 = !ms3 & exrom & !game & aec               &  a14 & !a15;
 assign p84 = !ms3 & exrom & !game & aec & !a12 & !a13 &  a14 &  a15;
 
 assign p85 = !loram & ms3 &  aec;
@@ -272,9 +272,9 @@ assign rom1 = p58 || p59 || p60 || p71 || p72 || p76;
 assign iocs = p0 || p1 || p2 || p3 || p4 || p5 || p6 || p7 || p8 || p9 || p10 || p11 || p62;
 assign dir = p12 || p14 || p16 || p18 || p20 || p22 || p24 || p26 || p28 || p30 || p32 || p34 || p39 || p40 || p41 || p44 || p65;
 assign vic = p12 || p13 || p14 || p15 || p16 || p17 || p18 || p19 || p20 || p21 || p22 || p23 || p61;
-assign ioacc = p0 || p1 || p2 || p3 || p4 || p5 || p6 || p7 || p8 || p9 || p10 || p11 ||
-               p12 || p13 || p14 || p15 || p16 || p17 || p18 || p19 || p20 || p21 || p22 || p61 || p62;
-assign gwe = p37 || p68; // p68 missing from original code
+assign ioacc = p0 || p1 || p2 || p3 || p4 || p5 || p6 || p7 || p8 || p9 || p10 || p11 || 
+               p12 || p13 || p14 || p15 || p16 || p17 || p18 || p19 || p20 || p21 || p22 || p23 || p61 || p62;
+assign gwe = p37 || p68;
 assign colram = p24 || p25 || p26 || p27 || p28 || p29 || p30 || p31 || p32 || p33 || p34 || p35 || p36 || p63 || p67;
 assign charom = p39 || p40 || p41 || p42 || p43 || p44 || p69;
 
